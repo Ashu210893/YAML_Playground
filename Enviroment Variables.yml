@@ -1,0 +1,18 @@
+kind: Pod                              
+apiVersion: v1                     
+metadata:                           
+  name: Env_Pod
+  annotations:
+    description: Annotations for testing
+  name: enviroments	
+spec:                                    
+  containers:                      
+    - name: cont-1                    
+      image: ubuntu              
+      command: ["/bin/bash", "-c", "while true; do echo Welcome to HAX; sleep 5 ; done"]
+	- name: cont-2
+	  image: ubuntu
+	  command: ["/bin/bash", "-c", "while true; do echo Welcome to the World; sleep 5 ; done"]
+      env: 
+	   - name: MYNAME
+	     value: Akshay Govalkar

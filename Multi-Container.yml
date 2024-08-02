@@ -1,0 +1,17 @@
+kind: Pod                              
+apiVersion: v1                     
+metadata:                           
+  name: demopod
+  annotations:
+    description: Annotations for testing
+  labels:
+   dept: Account   
+spec:                                    
+  containers:                      
+    - name: cont-1                     
+      image: ubuntu              
+      command: ["/bin/bash", "-c", "while true; do echo Hello-Akshay; sleep 5 ; done"]
+  containers:
+    -name: cont-2
+	 image: ubuntu
+	 command: ["/bin/bash", "-c", "while true; do echo Hello-World; sleep 5 ; done"]

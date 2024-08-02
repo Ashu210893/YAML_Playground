@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: nginx-service
+ labels:
+  author: akshay
+spec:
+ type: NodePort
+ ports:
+  - targetPort: 80
+    port: 80
+ type: NodePort
+ selector:
+  author: akshay
+  type: reverse-proxy
