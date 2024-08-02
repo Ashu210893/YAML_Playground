@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  EKSCluster:
+    Type: "AWS::EKS::Cluster"
+    Properties:
+      Name: "MyEKSCluster"
+      ResourcesVpcConfig:
+        SubnetIds:
+          - subnet-xxxxxxxx
+          - subnet-yyyyyyyy
+        SecurityGroupIds:
+          - sg-zzzzzzzz
+      RoleArn: "arn:aws:iam::123456789012:role/EKSClusterRole"
+      Version: "1.21"
